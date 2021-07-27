@@ -16,6 +16,7 @@
 package com.example.wordsapp
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -48,6 +49,15 @@ class MainActivity : AppCompatActivity() {
             if (isLinearLayoutManager)
                 ContextCompat.getDrawable(this, R.drawable.ic_grid_layout)
         else ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
+    }
+    
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.layout_menu, menu)
+
+        val layoutButton = menu?.findItem(R.id.action_switch_layout)
+        setIcon(layoutButton)
+
+        return true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
