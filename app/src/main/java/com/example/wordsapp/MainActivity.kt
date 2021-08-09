@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        Log.d("Main Activity", "onCreate Called")
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
