@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setupActionBarWithNavController(navController)
+
 //        Log.d("Main Activity", "onCreate Called")
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
-
+        setupActionBarWithNavController(navController)
 
     }
 
